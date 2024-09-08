@@ -1,0 +1,27 @@
+{
+  "name": "kedomingo/music-cleaner",
+  "description": "Music Library Cleaner",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "MusicCleaner\\": "src/"
+    },
+    "files": [
+      "vendor/james-heinrich/getid3/getid3/getid3.php",
+      "vendor/james-heinrich/getid3/getid3/write.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Kyle Domingo"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.8",
+    "php-di/php-di": "^7.0",
+    "symfony/console": "^7.0",
+    "symfony/dotenv": "^7.0",
+    "ext-sqlite3": "*",
+    "james-heinrich/getid3": "^1.9"
+  }
+}

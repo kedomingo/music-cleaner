@@ -1,0 +1,43 @@
+{
+  "results": {
+    "opensearch:Query": {
+      "#text": "",
+      "role": "request",
+      "startPage": "1"
+    },
+    "opensearch:totalResults": "1",
+    "opensearch:startIndex": "0",
+    "opensearch:itemsPerPage": "30",
+    "trackmatches": {
+      "track": [
+        {
+          "name": "Justin Timberlake - Selfish (Acoustic Cover) by Dakota Ryley",
+          "artist": "The Acoustic Room",
+          "url": "https://www.last.fm/music/The+Acoustic+Room/_/Justin+Timberlake+-+Selfish+(Acoustic+Cover)+by+Dakota+Ryley",
+          "streamable": "FIXME",
+          "listeners": "1",
+          "image": [
+            {
+              "#text": "",
+              "size": "small"
+            },
+            {
+              "#text": "",
+              "size": "medium"
+            },
+            {
+              "#text": "",
+              "size": "large"
+            },
+            {
+              "#text": "",
+              "size": "extralarge"
+            }
+          ],
+          "mbid": ""
+        }
+      ]
+    },
+    "@attr": {}
+  }
+}

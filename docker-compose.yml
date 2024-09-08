@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  app:
+    image: cleaner-app
+    build:
+      context: .
+      dockerfile: docker/php.dockerfile
+    volumes:
+      - ./:/app
+      - /Users/kd558w/Music/testmusic:/music
+      - ./db/cleaner.sqlite:/data/cleaner.sqlite
+    working_dir: /app
+    entrypoint: php /app/src/Console/cleaner.php /music
+    tty: true
+    stdin_open: true
+
+  db:
+    build:
+      context: .
+      dockerfile: docker/sqlite.dockerfile
+    volumes:
+      - ./db:/data
+    command: sh -c 'sqlite3 /data/cleaner.sqlite < /data/init.sql'
+    container_name: sqlite-db
+
+  sqlitebrowser:
+    image: linuxserver/sqlitebrowser
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+      - ENABLE_UWSGI=true
+    volumes:
+      - ./db:/data/db
+    container_name: sqlitebrowser
+
+  composer:
+    image: cleaner-app
+    volumes:
+      - ./:/app
+    entrypoint: php composer.phar
+    working_dir: /app
