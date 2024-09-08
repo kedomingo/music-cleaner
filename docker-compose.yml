@@ -8,7 +8,7 @@ services:
       dockerfile: docker/php.dockerfile
     volumes:
       - ./:/app
-      - /Users/kd558w/Music/testmusic:/music
+      - /Users/kyle/Music/testmusic:/music
       - ./db/cleaner.sqlite:/data/cleaner.sqlite
     working_dir: /app
     entrypoint: php /app/src/Console/cleaner.php /music

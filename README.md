@@ -21,7 +21,7 @@ docker-compose run --rm db
 
 Update `docker-compose.yaml` and update the path mapping to `/music`
 
-In my case `/Users/kd558w/Music/testmusic:/music` means my local music folder is at `/Users/kd558w/Music/testmusic`  
+In my case `/Users/kyle/Music/testmusic:/music` means my local music folder is at `/Users/kyle/Music/testmusic`  
 
 ```
 docker compose run --rm app
